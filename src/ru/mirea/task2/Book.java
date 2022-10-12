@@ -1,40 +1,40 @@
 package ru.mirea.task2;
 
 public class Book {
-    private int page;
+    private String author;
     private String name;
+    private int year;
 
-    public Book(int page) {
-        this.page = page;
-        this.name= name;
-    }
-
-    public Book(int page, String name) {
-        this.page = page;
-        this.name= name;
-    }
-
-    public Book(String name) {
+    public Book(String author, String name, int year) {
+        this.author = author;
         this.name = name;
-        this.page = 312;
-    }
-    public Book() {
-        this.name = "Sharks";
-        this.page = 312;
+        this.year = year;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "page = " + page +
-                ", name = '" + name + '\'' +
-                '}';
-    }
-}
+    public Book() {}
 
-class TestBook {
-    public static void main(String[] args) {
-        Book book = new Book();
-        System.out.println(book.toString());
+    public String getAuthor() {
+        return author;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
 }

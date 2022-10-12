@@ -1,40 +1,43 @@
 package ru.mirea.task2;
 
 public class Ball {
-    private int size;
-    private String color;
-
-    public Ball(int size, String color) {
-        this.size = size;
-        this.color = color;
+    public Ball(double x, double y)
+    {
+        this.x = x;
+        this.y = y;
     }
+    private double x;
+    private double y;
 
-    public Ball(int size) {
-        this.size = size;
-        this.color = "red";
+    public void setX(double x)
+    {
+        this.x = x;
     }
-
-    public Ball(String color) {
-        this.color = color;
-        this.size = 10;
+    public void setY(double y)
+    {
+        this.y = y;
     }
-    public Ball() {
-        this.color = "red";
-        this.size = 10;
+    public void setXY(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+    public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
+    }
+    public void move(double x, double y) {
+        this.x += x;
+        this.y += y;
     }
 
     @Override
     public String toString() {
         return "Ball{" +
-                "size = " + size +
-                ", color = '" + color + '\'' +
+                "x=" + x +
+                ", y=" + y +
                 '}';
     }
-}
 
-class TestBall {
-    public static void main(String[] args) {
-        Ball ball = new Ball();
-        System.out.println(ball.toString());
-    }
 }
